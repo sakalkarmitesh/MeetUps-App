@@ -1,0 +1,36 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}All Meetups {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'meetups/styles/base.css' %}">
+    {% block site_css %}{% endblock %}
+<!--    <link rel="stylesheet" href="{% static 'meetups/styles/all_meetups.css' %}">-->
+</head>
+<body>
+  <header id="main-header">
+   <nav><a href="/meetups" id="main-logo">DjangoMeetups</a> </nav>
+   <h1>{% block main_heading %}{% endblock %}</h1>
+   {% block header_content %}{% endblock %}
+  </header>
+  <main>
+
+  </main>
+
+    {% block body %}{% endblock %}
+<!--  <h1> All Meetups!</h1>-->
+<!--   <p>hello Guys</p>-->
+
+<!--   {% if show_meetups %}-->
+<!--      {% for meetup_item in meetups %}-->
+<!--         <p>{{ meetup_item.title }}</p>-->
+<!--      {% endfor %}-->
+
+<!--   {% else %}-->
+<!--      <p> No meetups found!</p>-->
+<!--   {% endif %}-->
+
+
+</body>
+</html>
